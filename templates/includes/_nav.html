@@ -19,6 +19,7 @@
         <div class="navbar-nav ms-auto navbar-ml">
             <a href="{% url "home:about" %}" class="nav-link">About</a>
             <a href="{% url "movies:index" %}" class="nav-link">Movies</a>
+            <a href="{% url "cart:index" %}" class="nav-link">Cart</a>
             <div class="vr bg-white mx-2 d-done d-lg-block"></div>
             {% if user.is_authenticated %}
                 <a href="{% url "accounts:logout" %}" class="nav-link">Logout ({{ user.username }})</a>
