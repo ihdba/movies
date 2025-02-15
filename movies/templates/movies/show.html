@@ -31,6 +31,9 @@
                                 <p class="card-text">
                                     {{ review.comment }}
                                 </p>
+                                {% if user.is_authenticated and user == review.user %}
+                                    <a href="{% url "movies:edit_review" id=movie.id review_id=review.id %}" class="btn btn-primary">Edit</a>
+                                {% endif %}
                             </li>
                         {% endfor %}
                     </ul>
