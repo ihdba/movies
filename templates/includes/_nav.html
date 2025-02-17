@@ -22,6 +22,7 @@
             <a href="{% url "cart:index" %}" class="nav-link">Cart</a>
             <div class="vr bg-white mx-2 d-done d-lg-block"></div>
             {% if user.is_authenticated %}
+            <a href="{% url "accounts:orders" %}" class="nav-link">Orders</a>
                 <a href="{% url "accounts:logout" %}" class="nav-link">Logout ({{ user.username }})</a>
             {% else %}
                 <a href="{% url "accounts:login" %}" class="nav-link">Login</a>
